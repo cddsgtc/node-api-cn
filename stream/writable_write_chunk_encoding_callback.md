@@ -11,10 +11,7 @@ changes:
 -->
 
 * `chunk` {string|Buffer|Uint8Array|any} 要写入的数据。可选的。
-  For streams
-  not operating in object mode, `chunk` must be a string, `Buffer` or
-  `Uint8Array`. For object mode streams, `chunk` may be any JavaScript value
-  other than `null`.
+  因为streams没有实现对象模式，`chunk`必须是一个字符串、`Buffer`或者`Unit8Array`,如果是对象模式流，那么应该是除了null之外的任何JavaScript值。
 * `encoding` {string} 如果 `chunk` 是字符串，这里指定字符编码
 * `callback` {Function} 缓冲数据输出时的回调函数
 * 返回： {boolean} 如果流需要等待 `'drain'` 事件触发才能继续写入数据，这里将返回 `false` ； 否则返回 `true`。
