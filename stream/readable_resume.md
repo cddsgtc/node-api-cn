@@ -4,12 +4,9 @@ added: v0.9.4
 
 * Returns: `this`
 
-The `readable.resume()` method causes an explicitly paused Readable stream to
-resume emitting [`'data'`][] events, switching the stream into flowing mode.
+`readable.resume()`方法能够把一个明确paused状态的readable stream转换成flowing状态，并且恢复到可以发送`data`事件。
 
-The `readable.resume()` method can be used to fully consume the data from a
-stream without actually processing any of that data as illustrated in the
-following example:
+`readable.ruesume()`方法能够不需要处理任何数据，就可以完全消费一个流中的的数据，如下例子所示：
 
 ```js
 getReadableStreamSomehow()
