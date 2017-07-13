@@ -2,15 +2,13 @@
 added: v0.9.4
 -->
 
-* `destination` {stream.Writable} Optional specific stream to unpipe
+* `destination` {stream.Writable} 操作一个明确的流（可写）为unpipe
 
-The `readable.unpipe()` method detaches a Writable stream previously attached
-using the [`stream.pipe()`][] method.
+ `readable.unpipe()` 方法会检测原先已经使用[`stream.pipe()`][]方法的一个可写流。
 
-If the `destination` is not specified, then *all* pipes are detached.
+如果 `destination` 是没有指定过的，那么会检测所有的pipe。
 
-If the `destination` is specified, but no pipe is set up for it, then
-the method does nothing.
+如果 `destination` 是制定过的，但是其没有使用过pipe，那么该方法什么也不做。
 
 ```js
 const readable = getReadableStreamSomehow();
